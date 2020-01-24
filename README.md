@@ -2,11 +2,15 @@
 
 ## By Krista Rutz.  _Last updated: 01/24/2020_
 
-This web application takes a number from a user and returns a range of numbers from 0 to the user inputted number, with some exciting exceptions.
+This web application, hosted on [GitHub Pages](https://kristarutz.github.io/Beep-Boop/), takes a number from a user and returns a range of numbers from 0 to the user inputted number, with some exciting exceptions.
 
 ### Description
 
 This web application allows the user to enter a number from 0 to 1000. It then prints a list of the numbers from 0 to the user's chosen number, inclusive. However, certain rules replace numbers containing the digits 1, 2, or 3 with _"Beep!"_, _"Boop!"_, and _"I'm sorry, Dave. I'm afraid I can't do that."_, respectively.
+
+### Installation / Set-up
+
+https://kristarutz.github.io/Beep-Boop/
 
 ### Objectives
 Your code will be reviewed for the following objectives:
