@@ -25,7 +25,6 @@ function generateList(int){
 //Front-end
 $(document).ready(function() {
   $("#gameToggle").click(function() {
-    //$("#gameToggle").button('toggle');
     $(".container2").hide();
     $(".container3").show();
   })
@@ -34,24 +33,30 @@ $(document).ready(function() {
     $(".container2").show();
     $(".container3").hide();
   });
-  // $("#listModeBtn").click(function() {
-  //   $(".container2").show();
-  //   $(".container3").hide();
-  // });
 
-  // $("#gameModeBtn").click(function() {
-  //   $(".container2").hide();
-  //   $(".container3").show();
-  // });
+  $("#listReset").click(function() {
+    console.log("list form reset");
+    $("#listOutput").text("");
+  });
 
-  $(":reset").click(function() {
-    $("#output").text("");
+  $("#gameReset").click(function() {
+    console.log("game form reset");
+    $("#gameOutput").text("");
   });
 
   $("#inputForm").submit(function(event) {
     event.preventDefault();
 
     var inputNumber = parseInt($("#userNumber").val());
-    $("#output").text(generateList(inputNumber));
+    $("#listOutput").text(generateList(inputNumber));
   });
+
+  $("#gameForm").submit(function(event) {
+    event.preventDefault();
+    console.log("game form submitted");
+
+    var userGuessedNumber = parseInt($("#userGuessedNumber").val());
+
+    $("#gameOutput").text((userGuessedNumber));
+  })
 });
