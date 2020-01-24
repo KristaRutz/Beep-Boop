@@ -11,6 +11,8 @@ function generateList(int){
       numbers.push('"I\'m sorry Dave, I\'m afraid I can\'t do that."');
     } else if (stringNum.match(contains2)) {
       numbers.push('"Boop!"');
+    } else if (stringNum.match(contains1)) {
+      numbers.push('"Beep!"');
     } else {
       numbers.push(i);
     }
@@ -26,7 +28,6 @@ $(document).ready(function() {
     event.preventDefault();
 
     var inputNumber = parseInt($("#userNumber").val());
-    console.log(inputNumber);
     $("#output").text(generateList(inputNumber));
   });
 });
