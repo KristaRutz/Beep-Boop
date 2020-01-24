@@ -19,12 +19,12 @@
               <div class="input-group-prepend">
                 <span class="input-group-text">0 to </span>
               </div>
-              <input class="form-control" id="userNumber" type="number" placeholder="# up to 1000">
+              <input class="form-control" id="userNumber" min="0" max="1000" type="number" placeholder="# up to 1000">
             </div>
           </div>
           <button class="btn btn-primary mb-3" type="submit">Go</button>
         </form>
-        <div id="output"></div>
+        <div id="output" class="well"></div>
       </div>
     </div>
   </body>
