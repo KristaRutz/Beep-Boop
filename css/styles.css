@@ -1,31 +1,24 @@
-/* .container {
-  height: 10em;
-  position: relative;
-}
-
-.container2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-}  */
-
-.container1 {
-  height: 10em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.container2 {
+/* .container2 {
+  height: 50%;
   text-align: center;
-  width: 50%;
-  margin: auto;
+  width: 70%;
   position: absolute;
   top: 50%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+} */
+
+.container2 {
+  height: 50%;
+  text-align: center;
+  width: 70%;
+  vertical-align: middle;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 25%
+}
+
+.output {
+  padding-bottom: 60%;
 }
