@@ -8,9 +8,16 @@
     <title>Friday Project 3</title>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container">
+
+      <div class="container1">
+        <button class="btn btn-secondary" type="button" id="listModeBtn">List Mode</button>
+        <button class="btn btn-secondary" type="button" id="gameModeBtn">Game Mode</button>
+      </div>
+
       <div class="container2">
-        <h1>Beep Boop</h1>
+        <img id="robot" src="img/kawaii-robot-vector-clipart.png" alt="robot clipart">
+        <h1>Beep Boop <small>List Mode</small></h1>
         <p>Please enter a number between 0 and 1000 to let the games begin!</p>
         <form class="" id="inputForm">
             <label class="sr-only" for="userNumber">Enter your range limit</label>
@@ -27,6 +34,27 @@
         </form>
         <div id="output" class="well"></div>
       </div>
+
+      <div class="container3">
+        <img id="robot" src="img/kawaii-robot-vector-clipart.png" alt="robot clipart">
+        <h1>Beep Boop <small>Game Mode</small></h1>
+        <p>Test your robot skills against a robot!</p>
+        <form class="" id="gameForm">
+            <label class="sr-only" for="userNumber">Enter your range limit</label>
+          <div class="form-group mb-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text">0 to </span>
+              </div>
+              <input class="form-control" id="userNumber" min="0" max="1000" type="number" placeholder="# up to 1000">
+            </div>
+          </div>
+            <button class="btn btn-light mb-3" type="reset">Clear</button>
+            <button class="btn btn-primary mb-3" type="submit">Go</button>
+        </form>
+        <div id="output" class="well"></div>
+      </div>
+
     </div>
   </body>
 </html>

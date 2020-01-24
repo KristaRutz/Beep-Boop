@@ -24,9 +24,19 @@ function generateList(int){
 
 //Front-end
 $(document).ready(function() {
+  $("#listModeBtn").click(function() {
+    $(".container2").show();
+    $(".container3").hide();
+  });
+
+  $("#gameModeBtn").click(function() {
+    $(".container2").hide();
+    $(".container3").show();
+  });
+
   $(":reset").click(function() {
     $("#output").text("");
-  })
+  });
 
   $("#inputForm").submit(function(event) {
     event.preventDefault();
