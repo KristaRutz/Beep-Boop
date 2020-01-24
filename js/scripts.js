@@ -8,7 +8,7 @@ function generateList(int){
   for (var i = 0; i <= int; i++){
     var stringNum = i.toString(10);
     if (stringNum.match(contains3)) {
-      numbers.push("I'm sorry Dave, I'm afraid I can't do that");
+      numbers.push("I'm sorry Dave, I'm afraid I can't do that.");
     } else {
       numbers.push(i);
     }
