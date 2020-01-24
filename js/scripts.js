@@ -24,15 +24,25 @@ function generateList(int){
 
 //Front-end
 $(document).ready(function() {
-  $("#listModeBtn").click(function() {
+  $("#gameToggle").click(function() {
+    //$("#gameToggle").button('toggle');
+    $(".container2").hide();
+    $(".container3").show();
+  })
+
+  $("#listToggle").click(function() {
     $(".container2").show();
     $(".container3").hide();
   });
+  // $("#listModeBtn").click(function() {
+  //   $(".container2").show();
+  //   $(".container3").hide();
+  // });
 
-  $("#gameModeBtn").click(function() {
-    $(".container2").hide();
-    $(".container3").show();
-  });
+  // $("#gameModeBtn").click(function() {
+  //   $(".container2").hide();
+  //   $(".container3").show();
+  // });
 
   $(":reset").click(function() {
     $("#output").text("");
