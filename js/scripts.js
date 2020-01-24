@@ -1,8 +1,9 @@
+//Back-end
+
 var contains3 = /3/;
 var contains2 = /2/;
 var contains1 = /1/;
 
-//Back-end
 function generateList(int){
   var numbers = [];
   for (var i = 0; i <= int; i++){
@@ -21,6 +22,9 @@ function generateList(int){
   return numberString;
 }
 
+function evaluateGuess(str, int){
+  return "correct";
+}
 
 //Front-end
 $(document).ready(function() {
@@ -44,7 +48,7 @@ $(document).ready(function() {
     $("#gameOutput").text("");
   });
 
-  $("#inputForm").submit(function(event) {
+  $("#listForm").submit(function(event) {
     event.preventDefault();
 
     var inputNumber = parseInt($("#userNumber").val());
@@ -53,10 +57,14 @@ $(document).ready(function() {
 
   $("#gameForm").submit(function(event) {
     event.preventDefault();
-    console.log("game form submitted");
+    //console.log("game form submitted");
 
-    var userGuessedNumber = parseInt($("#userGuessedNumber").val());
+    var numberGuess = parseInt($("#userGuessedNumber").val());
+    var guessType = $("input:radio[name=guessType]:checked").val();
+    console.log(guessType);
 
-    $("#gameOutput").text((userGuessedNumber));
+    var outputMessage = evaluateGuess(guessType, numberGuess);
+
+    $("#gameOutput").text(outputMessage);
   })
 });

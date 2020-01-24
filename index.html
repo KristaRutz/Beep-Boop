@@ -11,8 +11,8 @@
   <body>
     <div class="container">
 
-      <div class="">
-        <div class="btn-group btn-group-toggle container1" data-toggle="buttons">
+      <div class="container1">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
           <label class="btn btn-secondary active">
             <input type="radio" name="mode" id="listToggle" autocomplete="off" checked> List Mode
           </label>
@@ -26,7 +26,7 @@
         <img id="robot" src="img/kawaii-robot-vector-clipart.png" alt="robot clipart">
         <h1>Beep Boop <small>List Mode</small></h1>
         <p>Please enter a number between 0 and 1000 to let the games begin!</p>
-        <form class="" id="inputForm">
+        <form class="list" id="listForm">
             <label class="sr-only" for="userNumber">Enter your range limit</label>
           <div class="form-group mb-3">
             <div class="input-group">
@@ -36,8 +36,8 @@
               <input class="form-control" id="userNumber" min="0" max="1000" type="number" placeholder="# up to 1000">
             </div>
           </div>
-            <button class="btn btn-light mb-3" id="listReset" type="reset">Clear</button>
-            <button class="btn btn-primary mb-3" type="submit">Go</button>
+          <button class="btn btn-light mb-3" id="listReset" type="reset">Clear</button>
+          <button class="btn btn-primary mb-3" type="submit">Go</button>
         </form>
         <div id="listOutput" class="well"></div>
       </div>
@@ -46,21 +46,34 @@
         <img id="robot" src="img/kawaii-robot-vector-clipart.png" alt="robot clipart">
         <h1>Beep Boop <small>Game Mode</small></h1>
         <p>Test your robot skills against a robot!</p>
-        <form class="" id="gameForm">
-            <label class="sr-only" for="userGuessedNumber">Enter your guess</label>
+        <form class="game" id="gameForm">
+          
           <div class="form-group mb-3">
             <div class="input-group">
+              <label class="sr-only" for="userGuessedNumber">Enter your guess</label>
               <input id="userGuessedNumber" type="number" min="0" max="200" class="form-control" placeholder="Enter number">
-              <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">Number</button>
-                <button class="btn btn-outline-secondary" type="button">Beep!</button>
-                <button class="btn btn-outline-secondary" type="button">Boop!</button>
-                <button class="btn btn-outline-secondary" type="button">I'm sorry, Dave!</button>
-              </div>
             </div>
           </div>
-            <button class="btn btn-light mb-3" id="gameReset" type="reset">Clear</button>
-            <button class="btn btn-primary mb-3" type="submit">Submit</button>
+
+          <div class="form-group mb-3">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary">
+                <input type="radio" name="guessType" id="numberGuess" autocomplete="off" value="number"> Number
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="guessType" id="beepGuess" autocomplete="off" value="beep"> Beep!
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="guessType" id="boopGuess" autocomplete="off" value="boop"> Boop!
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="guessType" id="sorryGuess" autocomplete="off" value="sorry"> I'm sorry, Dave!
+              </label>
+            </div>
+          </div>
+
+          <button class="btn btn-light mb-3" id="gameReset" type="reset">Clear</button>
+          <button class="btn btn-primary mb-3" type="submit">Submit</button>
         </form>
         <div id="gameOutput" class="well"></div>
       </div>
