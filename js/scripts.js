@@ -24,6 +24,10 @@ function generateList(int){
 
 //Front-end
 $(document).ready(function() {
+  $(":reset").click(function() {
+    $("#output").text("");
+  })
+
   $("#inputForm").submit(function(event) {
     event.preventDefault();
 
