@@ -59,9 +59,34 @@ Your code will be reviewed for the following objectives:
 * **Spec**: The program allows the user to reset the form
   * **Input**: Clicks reset
   * **Output**: Form is reset and the output display is empty
+  #### Further Exploration
 * **Spec**: The program will allow the user to enter "game mode"
-  * **Input**: Toggle Game mode
-  * **Output**: User will be prompted to select the correct next value in the sequence, with a point score.
+  * **Input**: Clikc Game mode
+  * **Output**: Game mode is toggled.
+* **Spec**: "Game mode" brings up buttons for the user to choose from
+  * **Input**: "Toggle Game mode"
+  * **Output**: Button selection is displayed: #, beep, boop, "sorry"
+* **Spec**: The program displays "0" and outputs true when user selects 0.
+  * **Input**: "0"
+  * **Output**: "correct"
+* **Spec**: The program displays "0" and outputs false when user selects !0.
+  * **Input**: "Beep!"
+  * **Output**: "Beep!"
+* **Spec**: The program displays "1" when user clicks next.
+  * **Input**: Clicks next
+  * **Output**: Game display reset & next "number" appears
+* **Spec**: The program displays "1" and outputs true when user selects "beep".
+  * **Input**: "beep"
+  * **Output**: "correct"
+  * **Spec**: The program displays "1" and outputs false when user selects "1".
+  * **Input**: "1"
+  * **Output**: "wrong"
+  * **Spec**: The program displays "2" and outputs true when user selects "boop".
+  * **Input**: "boop"
+  * **Output**: "correct"
+  * **Spec**: The program displays "2" and outputs false when user selects "2" or "beep".
+  * **Input**: "2"
+  * **Output**: "wrong"
 </details>
 
 ### Usage and Licensing
