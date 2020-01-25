@@ -92,15 +92,18 @@ Your code will be reviewed for the following objectives:
 * **Spec**: The program displays "1" and outputs true when user selects "beep".
   * **Input**: "beep"
   * **Output**: "correct"
-  * **Spec**: The program displays "1" and outputs false when user selects "1".
+* **Spec**: The program displays "1" and outputs false when user selects "1".
   * **Input**: "1"
   * **Output**: "wrong"
-  * **Spec**: The program displays "2" and outputs true when user selects "boop".
+* **Spec**: The program displays "2" and outputs true when user selects "boop".
   * **Input**: "boop"
   * **Output**: "correct"
-  * **Spec**: The program displays "2" and outputs false when user selects "2" or "beep".
+* **Spec**: The program displays "2" and outputs false when user selects "2" or "beep".
   * **Input**: "2"
   * **Output**: "wrong"
+* **Spec**: The program displays lives and levels. False levels cause loss of life
+  * **Input**: Incorrect answer
+  * **Output**: Lives--
 </details>
 
 ## Known Bugs
