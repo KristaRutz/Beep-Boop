@@ -101,6 +101,7 @@ $(document).ready(function() {
         if (lives === 0){
           $("#submitButton").addClass("disabled");
           $("#gameOutput").text("Game Over");
+          $("#submitButton").text("Refresh");
         }
       }
     }
