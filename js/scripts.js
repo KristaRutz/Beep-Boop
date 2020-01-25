@@ -23,12 +23,7 @@ function generateList(int){
 }
 
 function evaluateGuess(int, str){
-
-  console.log(int);
-  console.log(str);
-
   var stringInt = int.toString();
-
   if (stringInt.match(contains3)) {
     if (str === "sorry") {
       return true;
@@ -69,13 +64,11 @@ $(document).ready(function() {
   });
 
   $("#listReset").click(function() {
-    console.log("list form reset");
     $("#listOutput").text("");
   });
 
   $("#listForm").submit(function(event) {
     event.preventDefault();
-
     var inputNumber = parseInt($("#userNumber").val());
     $("#listOutput").text(generateList(inputNumber));
   });
@@ -84,10 +77,8 @@ $(document).ready(function() {
   var lives = 5;
 
   $("#gameForm").submit(function(event) {
-
     if (lives > 0){
       event.preventDefault();
-      
       var guessType = $("input:radio[name=guessType]:checked").val();
       var outputMessage = evaluateGuess(level, guessType);
 
@@ -106,5 +97,5 @@ $(document).ready(function() {
       }
     }
 
-  })
+  });
 });
