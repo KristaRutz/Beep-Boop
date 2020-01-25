@@ -47,18 +47,12 @@
         <h1>Beep Boop <small>Game Mode</small></h1>
         <p>Test your robot skills against a robot!</p>
         <form class="game" id="gameForm">
-          
-          <div class="form-group mb-3">
-            <div class="input-group">
-              <label class="sr-only" for="userGuessedNumber">Enter your guess</label>
-              <input id="userGuessedNumber" type="number" min="0" max="200" class="form-control" placeholder="Enter number">
-            </div>
-          </div>
-
+          <label id="level">Level: 0</label>
+          <label id="lives">Lives: 5</label>
           <div class="form-group mb-3">
             <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <label class="btn btn-secondary">
-                <input type="radio" name="guessType" id="numberGuess" autocomplete="off" value="number"> Number
+                <input type="radio" name="guessType" id="numberGuess" autocomplete="off" value="number" checked> Number
               </label>
               <label class="btn btn-secondary">
                 <input type="radio" name="guessType" id="beepGuess" autocomplete="off" value="beep"> Beep!
@@ -71,9 +65,7 @@
               </label>
             </div>
           </div>
-
-          <button class="btn btn-light mb-3" id="gameReset" type="reset">Clear</button>
-          <button class="btn btn-primary mb-3" type="submit">Submit</button>
+          <button class="btn btn-primary mb-3 btn-block" type="submit" id="submitButton">Submit</button>
         </form>
         <div id="gameOutput" class="well"></div>
       </div>

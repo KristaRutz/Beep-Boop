@@ -22,8 +22,38 @@ function generateList(int){
   return numberString;
 }
 
-function evaluateGuess(str, int){
-  return "correct";
+function evaluateGuess(int, str){
+
+  console.log(int);
+  console.log(str);
+
+  var stringInt = int.toString();
+
+  if (stringInt.match(contains3)) {
+    if (str === "sorry") {
+      return true;
+    } else {
+      return false;
+    }
+  } else if (stringInt.match(contains2)) {
+    if (str === "boop") {
+      return true;
+    } else {
+      return false;
+    }
+  } else if (stringInt.match(contains1)) {
+    if (str === "beep") {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    if (str === "number") {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 
 //Front-end
@@ -43,11 +73,6 @@ $(document).ready(function() {
     $("#listOutput").text("");
   });
 
-  $("#gameReset").click(function() {
-    console.log("game form reset");
-    $("#gameOutput").text("");
-  });
-
   $("#listForm").submit(function(event) {
     event.preventDefault();
 
@@ -55,16 +80,30 @@ $(document).ready(function() {
     $("#listOutput").text(generateList(inputNumber));
   });
 
+  var level = 0;
+  var lives = 5;
+
   $("#gameForm").submit(function(event) {
-    event.preventDefault();
-    //console.log("game form submitted");
 
-    var numberGuess = parseInt($("#userGuessedNumber").val());
-    var guessType = $("input:radio[name=guessType]:checked").val();
-    console.log(guessType);
+    if (lives > 0){
+      event.preventDefault();
+      
+      var guessType = $("input:radio[name=guessType]:checked").val();
+      var outputMessage = evaluateGuess(level, guessType);
 
-    var outputMessage = evaluateGuess(guessType, numberGuess);
+      level++;
+      $("#level").text(`Level: ${level}`);
+      $("#gameOutput").text(outputMessage);
 
-    $("#gameOutput").text(outputMessage);
+      if (outputMessage === false) {
+        lives--;
+        $("#lives").text(`Lives: ${lives}`);
+        if (lives === 0){
+          $("#submitButton").addClass("disabled");
+          $("#gameOutput").text("Game Over");
+        }
+      }
+    }
+
   })
 });

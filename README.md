@@ -61,7 +61,7 @@ Your code will be reviewed for the following objectives:
   * **Output**: Form is reset and the output display is empty
   #### Further Exploration
 * **Spec**: The program will allow the user to enter "game mode"
-  * **Input**: Clikc Game mode
+  * **Input**: Click Game mode
   * **Output**: Game mode is toggled.
 * **Spec**: "Game mode" brings up buttons for the user to choose from
   * **Input**: "Toggle Game mode"
