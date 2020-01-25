@@ -4,15 +4,29 @@
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/bootstrap.js"></script>
     <script src="js/scripts.js"></script>
     <title>Friday Project 3</title>
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container">
+
+      <div class="container1">
+        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+          <label class="btn btn-secondary active">
+            <input type="radio" name="mode" id="listToggle" autocomplete="off" checked> List Mode
+          </label>
+          <label class="btn btn-secondary">
+            <input type="radio" name="mode" id="gameToggle" autocomplete="off"> Game Mode
+          </label>
+        </div>
+      </div>
+
       <div class="container2">
-        <h1>Beep Boop</h1>
+        <img id="robot" src="img/kawaii-robot-vector-clipart.png" alt="robot clipart">
+        <h1>Beep Boop <small>List Mode</small></h1>
         <p>Please enter a number between 0 and 1000 to let the games begin!</p>
-        <form class="" id="inputForm">
+        <form class="list" id="listForm">
             <label class="sr-only" for="userNumber">Enter your range limit</label>
           <div class="form-group mb-3">
             <div class="input-group">
@@ -22,11 +36,40 @@
               <input class="form-control" id="userNumber" min="0" max="1000" type="number" placeholder="# up to 1000">
             </div>
           </div>
-            <button class="btn btn-light mb-3" type="reset">Clear</button>
-            <button class="btn btn-primary mb-3" type="submit">Go</button>
+          <button class="btn btn-light mb-3" id="listReset" type="reset">Clear</button>
+          <button class="btn btn-primary mb-3" type="submit">Go</button>
         </form>
-        <div id="output" class="well"></div>
+        <div id="listOutput" class="well"></div>
       </div>
+
+      <div class="container3">
+        <img id="robot" src="img/kawaii-robot-vector-clipart.png" alt="robot clipart">
+        <h1>Beep Boop <small>Game Mode</small></h1>
+        <p>Test your robot skills against a robot!</p>
+        <form class="game" id="gameForm">
+          <label id="level">Level: 0</label>
+          <label id="lives">Lives: 5</label>
+          <div class="form-group mb-3">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+              <label class="btn btn-secondary">
+                <input type="radio" name="guessType" id="numberGuess" autocomplete="off" value="number" checked> Number
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="guessType" id="beepGuess" autocomplete="off" value="beep"> Beep!
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="guessType" id="boopGuess" autocomplete="off" value="boop"> Boop!
+              </label>
+              <label class="btn btn-secondary">
+                <input type="radio" name="guessType" id="sorryGuess" autocomplete="off" value="sorry"> I'm sorry, Dave!
+              </label>
+            </div>
+          </div>
+          <button class="btn btn-primary mb-3 btn-block" type="submit" id="submitButton">Submit</button>
+        </form>
+        <div id="gameOutput" class="well"></div>
+      </div>
+
     </div>
   </body>
 </html>

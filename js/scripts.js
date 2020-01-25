@@ -1,8 +1,9 @@
+//Back-end
+
 var contains3 = /3/;
 var contains2 = /2/;
 var contains1 = /1/;
 
-//Back-end
 function generateList(int){
   var numbers = [];
   for (var i = 0; i <= int; i++){
@@ -21,17 +22,89 @@ function generateList(int){
   return numberString;
 }
 
+function evaluateGuess(int, str){
+
+  console.log(int);
+  console.log(str);
+
+  var stringInt = int.toString();
+
+  if (stringInt.match(contains3)) {
+    if (str === "sorry") {
+      return true;
+    } else {
+      return false;
+    }
+  } else if (stringInt.match(contains2)) {
+    if (str === "boop") {
+      return true;
+    } else {
+      return false;
+    }
+  } else if (stringInt.match(contains1)) {
+    if (str === "beep") {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    if (str === "number") {
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
 
 //Front-end
 $(document).ready(function() {
-  $(":reset").click(function() {
-    $("#output").text("");
+  $("#gameToggle").click(function() {
+    $(".container2").hide();
+    $(".container3").show();
   })
 
-  $("#inputForm").submit(function(event) {
+  $("#listToggle").click(function() {
+    $(".container2").show();
+    $(".container3").hide();
+  });
+
+  $("#listReset").click(function() {
+    console.log("list form reset");
+    $("#listOutput").text("");
+  });
+
+  $("#listForm").submit(function(event) {
     event.preventDefault();
 
     var inputNumber = parseInt($("#userNumber").val());
-    $("#output").text(generateList(inputNumber));
+    $("#listOutput").text(generateList(inputNumber));
   });
+
+  var level = 0;
+  var lives = 5;
+
+  $("#gameForm").submit(function(event) {
+
+    if (lives > 0){
+      event.preventDefault();
+      
+      var guessType = $("input:radio[name=guessType]:checked").val();
+      var outputMessage = evaluateGuess(level, guessType);
+
+      level++;
+      $("#level").text(`Level: ${level}`);
+      $("#gameOutput").text(outputMessage);
+
+      if (outputMessage === false) {
+        lives--;
+        $("#lives").text(`Lives: ${lives}`);
+        if (lives === 0){
+          $("#submitButton").addClass("disabled");
+          $("#gameOutput").text("Game Over");
+          $("#submitButton").text("Refresh");
+        }
+      }
+    }
+
+  })
 });
