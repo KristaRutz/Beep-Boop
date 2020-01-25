@@ -26,27 +26,6 @@ You can also download the ZIP file to run this program without internet.
 * Custom CSS and responsive design using Bootstrap framework
 * HTML
 
-## Objectives
-Your code will be reviewed for the following objectives:
-
-- JavaScript business logic and user interface logic are separate.  
-- Variable names are descriptive and use lower camel case (e.g. myVariableExample).
-- Code is clean, well-refactored, and easy-to-read. This includes correct indendation, spacing, and including only necessary comments and debugging tools.
-- Application implements a loop and works as expected.
-- All previous objectives have been met.
-- Logic is broken down into "plain English" specs, listed in README.
-- Project is in a presentable, portfolio-quality state.
-- Required functionality is in place by Friday deadline.
-- Project demonstrates understanding of this week's concepts. If prompted, you are able to discuss your code with an instructor using correct terminology.
-#### PAST Standards
-- Commits are made regularly with clear messages that finish the phrase "It will…".
-- Project README that includes, bare minimum:
-  - author name
-  - program name
-  - detailed setup instructions
-  - description
-  - copyright and license information
-
 ## Specifications
 <details>
   <summary>Expand specs for this project</summary>
@@ -73,7 +52,7 @@ Your code will be reviewed for the following objectives:
 * **Spec**: The program allows the user to reset the form
   * **Input**: Clicks reset
   * **Output**: Form is reset and the output display is empty
-  #### Further Exploration
+#### Further Exploration
 * **Spec**: The program will allow the user to enter "game mode"
   * **Input**: Click Game mode
   * **Output**: Game mode is toggled.
